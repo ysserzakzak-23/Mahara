@@ -1,0 +1,27 @@
+# Environment
+.env
+firebase-service-account.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Alembic
+# (keep versions, ignore nothing extra for now)
+
+# User-uploaded images (avatars, service covers, portfolio photos)
+/uploads/

@@ -1,0 +1,36 @@
+{
+  "_comment": [
+    "Copy this file to google-services.json and fill it with YOUR Firebase project's values.",
+    "Get it from: Firebase console > Project settings > Your apps > Android app > google-services.json",
+    "package_name must stay com.example.service_hub, or it will not match applicationId in app/build.gradle.kts.",
+    "Without this file the Android build fails: the com.google.gms.google-services plugin looks for it.",
+    "The app still runs without working Firebase values - push notifications are the only thing that stops."
+  ],
+  "project_info": {
+    "project_number": "000000000000",
+    "project_id": "your-project-id",
+    "storage_bucket": "your-project-id.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:000000000000:android:0000000000000000000000",
+        "android_client_info": {
+          "package_name": "com.example.service_hub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

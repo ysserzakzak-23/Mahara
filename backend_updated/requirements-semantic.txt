@@ -1,0 +1,15 @@
+# Everything in requirements.txt, plus the Semantic (AI) search dependency.
+#
+# Install this INSTEAD of requirements.txt when SEMANTIC_SEARCH_ENABLED=true:
+#
+#     pip install -r requirements-semantic.txt
+#
+# It pulls in torch: expect several hundred megabytes, and a further ~1.1GB
+# the first time the model itself downloads (cached under ~/.cache/huggingface
+# afterwards). See SEMANTIC_SEARCH_SETUP.md.
+#
+# With the base requirements only, /search/semantic answers 503 with a
+# message naming this install step, and the rest of the API is unaffected.
+-r requirements.txt
+
+sentence-transformers==3.3.1

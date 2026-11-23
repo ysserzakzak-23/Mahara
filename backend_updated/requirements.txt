@@ -1,0 +1,30 @@
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+
+# Database
+sqlalchemy==2.0.36
+alembic==1.14.0
+psycopg2-binary==2.9.10
+
+# Settings & environment
+pydantic==2.10.4
+pydantic-settings==2.7.1
+email-validator==2.2.0
+
+# Auth & security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.0.1
+python-multipart==0.0.20
+
+# Push notifications (Firebase Cloud Messaging)
+firebase-admin==6.6.0
+
+# Semantic (AI) search is OPTIONAL and its dependency is NOT installed here.
+# SEMANTIC_SEARCH_ENABLED defaults to false, and sentence-transformers pulls
+# in torch — hundreds of megabytes for a feature that is off unless asked
+# for. To turn it on, install requirements-semantic.txt instead of this file
+# (it includes this one). See SEMANTIC_SEARCH_SETUP.md.
+
+# Utilities
+python-dotenv==1.0.1

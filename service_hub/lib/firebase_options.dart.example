@@ -1,0 +1,43 @@
+// Copy this file to firebase_options.dart and fill it with YOUR Firebase
+// project's values, or run `flutterfire configure`, which regenerates the real
+// file for every platform at once.
+//
+// The values below are placeholders. They let the project COMPILE, which is
+// all most people cloning this repository need — lib/main.dart imports this
+// file, so without it nothing builds at all. At run time Firebase.initializeApp
+// then fails on the fake values, main.dart catches that, and the app carries on
+// with push notifications disabled. Everything else works.
+//
+// Only Android is configured here, matching the single config file the project
+// ships. For iOS or web, add those apps in the Firebase console (or let
+// `flutterfire configure` do it).
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart' show defaultTargetPlatform, kIsWeb, TargetPlatform;
+
+class DefaultFirebaseOptions {
+  static FirebaseOptions get currentPlatform {
+    if (kIsWeb) {
+      throw UnsupportedError(
+        'DefaultFirebaseOptions have not been configured for web — see '
+        'the comment at the top of this file.',
+      );
+    }
+    switch (defaultTargetPlatform) {
+      case TargetPlatform.android:
+        return android;
+      default:
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have only been configured for Android — '
+          'see the comment at the top of this file.',
+        );
+    }
+  }
+
+  static const FirebaseOptions android = FirebaseOptions(
+    apiKey: 'AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+    appId: '1:000000000000:android:0000000000000000000000',
+    messagingSenderId: '000000000000',
+    projectId: 'your-project-id',
+    storageBucket: 'your-project-id.firebasestorage.app',
+  );
+}

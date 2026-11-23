@@ -1,0 +1,10 @@
+# The test environment IS the development environment, so this file defers to
+# requirements-dev.txt instead of declaring anything of its own.
+#
+# Running the suite needs the application's own dependencies (fastapi,
+# sqlalchemy, pydantic, python-jose ...) plus pytest and httpx, which
+# fastapi.testclient.TestClient imports. On its own this file used to declare
+# `pytest>=8.0` and nothing else: it could not install a working test
+# environment, and its loose constraint disagreed with the `pytest==8.3.4`
+# pinned in requirements-dev.txt. The pin now lives in exactly one place.
+-r requirements-dev.txt

@@ -1,0 +1,52 @@
+# Repository-wide safety net. The backend and the Flutter app each have their
+# own .gitignore; these rules repeat the dangerous ones so a single mistake in
+# a sub-folder cannot leak a secret or push a gigabyte of build output.
+
+# --- Secrets: never commit, in any folder ---
+.env
+.env.*
+!.env.example
+*service-account*.json
+!*service-account*.json.example
+*.pem
+*.key
+*.jks
+*.keystore
+key.properties
+
+# --- Firebase app config (see service_hub/.gitignore) ---
+google-services.json
+GoogleService-Info.plist
+lib/firebase_options.dart
+
+# --- Private data ---
+# Photos real users uploaded: avatars, service covers, portfolio shots.
+uploads/
+
+# --- The thesis itself ---
+# Kept out of the code repository on purpose: it is the written work, not the
+# software, and it is 21MB of it. It stays in this folder on disk either way.
+Thesis/
+
+# --- Local tooling state: machine-specific paths, not useful to anyone else ---
+.claude/settings.local.json
+
+# --- Build output and dependencies (gigabytes; GitHub rejects >100MB files) ---
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+build/
+.dart_tool/
+.flutter-plugins-dependencies
+node_modules/
+
+# --- Editors and OS ---
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
